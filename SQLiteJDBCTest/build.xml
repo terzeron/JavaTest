@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test project build" default="build">
+	
+	<property name="message" value="hello music" />
+    <property file=".my.properties" />
+
+	<target name="build">
+		<echo>${message}</echo>
+		<echo>${message1}</echo>
+	</target>
+</project>

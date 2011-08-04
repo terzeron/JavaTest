@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="org.sqlite.JDBC"/>
+		<property name="url" value="jdbc:sqlite:test.db" />
+        <!-- property name="username" value="scott" />
+        <property name="password" value="tiger" /-->
+    </bean>
+	<bean id="sqlMap" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation">
+			<value>classpath:SqlMapConfig.xml</value>
+		</property>
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="tradingService" class="com.developersBook.iBatis.service.TradeServiceImpl">
+		<property name="sqlMapClient" ref="sqlMap"/>
+	</bean>
+	
+</beans>

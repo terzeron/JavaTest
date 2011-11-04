@@ -1,14 +1,19 @@
-package springbook.user.domain;
+package springbook.user.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
 public class UserDao {
 	private ConnectionMaker connectionMaker;
 	
-	public UserDao(ConnectionMaker connectionMaker) {
+	@Bean
+	public void setConnectionMaker(ConnectionMaker connectionMaker) {
 		this.connectionMaker = connectionMaker;
 	}
 	
@@ -16,7 +21,7 @@ public class UserDao {
 		Connection c = connectionMaker.makeConnection();
 		PreparedStatement ps = 
 			c.prepareStatement("insert into users (id, name, password) values (?, ?, ?)");
-		ps.setString(1, user.getId());
+		ps.setInt(1, user.getId());
 		ps.setString(2, user.getName());
 		ps.setString(3, user.getPassword());
 		ps.executeUpdate();
@@ -24,14 +29,13 @@ public class UserDao {
 		c.close();
 	}
 	
-	public User get(String id) throws ClassNotFoundException, SQLException {
+	public User get(int id) throws ClassNotFoundException, SQLException {
 		Connection c = connectionMaker.makeConnection();
 		PreparedStatement ps = c.prepareStatement("select * from users where id = ?");
-		ps.setString(1, id);
+		ps.setInt(1, id);
 		ResultSet rs = ps.executeQuery();
-		rs.next();
 		User user = new User();
-		user.setId(rs.getString("id"));
+		user.setId(rs.getInt("id"));
 		user.setName(rs.getString("name"));
 		user.setPassword(rs.getString("password"));
 		rs.close();

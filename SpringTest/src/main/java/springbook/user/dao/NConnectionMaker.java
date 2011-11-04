@@ -1,4 +1,4 @@
-package springbook.user.domain;
+package springbook.user.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,8 @@ public class NConnectionMaker implements ConnectionMaker {
 
 	public Connection makeConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("org.sqlite.JDBC");
-		Connection c = DriverManager.getConnection("jdbc:sqlite:test.db");
+		System.out.println("connecting to N");
+		Connection c = DriverManager.getConnection("jdbc:sqlite:N.db");
 		return c;
 	}
 	

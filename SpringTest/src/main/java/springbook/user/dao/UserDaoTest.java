@@ -12,7 +12,7 @@ public class UserDaoTest {
 		
 		User user = new User();
 		user.setId(1);
-		user.setName("백기선");
+		user.setName("testuser");
 		user.setPassword("testpass");
 		dao.add(user);
 		System.out.println(dao.get(1).getName());

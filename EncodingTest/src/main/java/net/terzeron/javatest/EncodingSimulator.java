@@ -1,5 +1,6 @@
+package main.java.net.terzeron.javatest;
+
 import java.io.UnsupportedEncodingException;
-import java.util.Locale;
 
 
 public class EncodingSimulator {

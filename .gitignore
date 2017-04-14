@@ -1,6 +1,7 @@
 .idea/
 *.iml
 .project
+.classpath
 .settings
 *.class
 .DS_Store

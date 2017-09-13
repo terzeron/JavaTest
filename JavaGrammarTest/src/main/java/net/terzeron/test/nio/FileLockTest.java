@@ -8,10 +8,10 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 
 /**
- * Created by terzeron on 2015-12-08.
+ * Created by terzeron on 2017. 5. 15..
  */
 public class FileLockTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         RandomAccessFile file = null;
         FileLock fileLock = null;
 
@@ -24,11 +24,15 @@ public class FileLockTest {
                 System.out.println("File is locked");
                 accessTheLockedFile();
             }
-
         } catch (FileNotFoundException e) {
             System.out.println("can't find the file");
         } catch (IOException e) {
             System.out.println("can't lock the file");
+        } finally {
+            if (fileLock != null) {
+                System.out.println("file lock is to be released");
+                fileLock.release();
+            }
         }
     }
 

@@ -9,6 +9,7 @@ public class EncodingSimulator {
 		for (int i = 0; i < b.length; i++) {
 			System.out.print(String.format("%02X", ((int) b[i] & 0xFF)) + " ");
 		}
+
 		System.out.println("");
 	}
 	

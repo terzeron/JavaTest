@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.terzeron.java.lcdisplay;
+
+/**
+ * @author terzeron
+ *
+ */
+public class Number2 extends Number {
+	public Number2(int size) {
+		super(size);
+	}
+	
+	public void draw() {
+		drawTopHorizontalLine();
+		drawRightTopVerticalLine();
+		drawMiddleHorizontalLine();
+		drawLeftBottomVerticalLine();
+		drawBottomHorizontalLine();
+	}
+}

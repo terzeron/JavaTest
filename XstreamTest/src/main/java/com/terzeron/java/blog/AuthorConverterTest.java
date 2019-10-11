@@ -1,8 +1,8 @@
-package net.terzeron.xstream.blog;
+package com.terzeron.java.blog;
 
 import com.thoughtworks.xstream.XStream;
 
-public class TestDriver {
+public class AuthorConverterTest {
 	public static void main(String[] args) {
         Blog teamBlog = new Blog(new Author("Guilherme Silveira"));
         teamBlog.add(new Entry("first","My first blog entry."));

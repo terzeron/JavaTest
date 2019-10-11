@@ -1,4 +1,4 @@
-package net.terzeron.xstream.person;
+package com.terzeron.java.person;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;

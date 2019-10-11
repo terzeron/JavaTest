@@ -1,14 +1,15 @@
-package net.terzeron.xstream.birthday;
-
-import java.util.Calendar;
+package com.terzeron.java.birthday;
 
 import com.thoughtworks.xstream.converters.ConversionException;
+import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-public class BirthdayConverter {
+import java.util.Calendar;
+
+public class BirthdayConverter implements Converter {
 	public boolean canConvert(Class clazz) {
 		return Birthday.class == clazz;
 	}

@@ -1,10 +1,10 @@
-package net.terzeron.xstream.encoding;
-
-import java.io.File;
+package com.terzeron.java.encoding;
 
 import com.thoughtworks.xstream.XStream;
 
-public class TestDriver {
+import java.io.File;
+
+public class EncodingTest {
 	public static void main(String[] args) {
 	
 //		XStream xstream = new XStream(new DomDriver("MS949"));

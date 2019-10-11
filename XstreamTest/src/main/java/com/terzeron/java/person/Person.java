@@ -1,4 +1,4 @@
-package net.terzeron.xstream.birthday;
+package com.terzeron.java.person;
 
 public class Person {
 	private String name;

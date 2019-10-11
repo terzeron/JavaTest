@@ -1,8 +1,8 @@
-package net.terzeron.xstream.addressbook;
+package com.terzeron.java.addressbook;
 import com.thoughtworks.xstream.XStream;
 
 
-public class TestDriver {
+public class PersonTest {
 	public static void main(String[] args) {
 		XStream xstream = new XStream();
 //		XStream xstream = new XStream(new DomDriver());

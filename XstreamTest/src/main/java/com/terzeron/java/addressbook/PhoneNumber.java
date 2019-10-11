@@ -1,4 +1,4 @@
-package net.terzeron.xstream.addressbook;
+package com.terzeron.java.addressbook;
 
 public class PhoneNumber {
 	private int code;

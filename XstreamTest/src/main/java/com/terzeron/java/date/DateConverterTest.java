@@ -1,4 +1,4 @@
-package net.terzeron.xstream.date;
+package com.terzeron.java.date;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -7,7 +7,7 @@ import java.util.Locale;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-public class TestDriver {
+public class DateConverterTest {
 	public static void main(String[] args) {
 		Calendar calendar = new GregorianCalendar();
 		

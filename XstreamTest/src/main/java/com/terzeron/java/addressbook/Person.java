@@ -1,4 +1,4 @@
-package net.terzeron.xstream.addressbook;
+package com.terzeron.java.addressbook;
 
 public class Person {
 	private String firstname;

@@ -1,4 +1,4 @@
-package net.terzeron.xstream.blog;
+package com.terzeron.java.blog;
 
 import java.util.List;
 import java.util.ArrayList;

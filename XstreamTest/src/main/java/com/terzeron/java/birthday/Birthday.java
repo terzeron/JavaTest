@@ -1,4 +1,4 @@
-package net.terzeron.xstream.birthday;
+package com.terzeron.java.birthday;
 import java.util.Calendar;
 
 

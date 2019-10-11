@@ -1,4 +1,4 @@
-package net.terzeron.xstream.blog;
+package com.terzeron.java.blog;
 
 public class Entry {
 	private String title, description;

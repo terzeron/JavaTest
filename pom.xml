@@ -52,5 +52,6 @@
         <module>iBatisTest</module>
         <module>JacksonStreamingAPITest</module>
         <module>XstreamTest</module>
+        <module>JPATest</module>
     </modules>
 </project>
